@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <circle cx="100" cy="100" r="96" fill="#fff"/>
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#7a1220" stroke-width="3"/>
+  <circle cx="100" cy="100" r="84" fill="none" stroke="#c9a24b" stroke-width="1.5" stroke-dasharray="4 5"/>
+  <text x="100" y="108" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-size="62" fill="#7a1220">Oasis</text>
+  <text x="100" y="136" text-anchor="middle" font-family="Georgia,serif" font-size="13" letter-spacing="3" fill="#7a1220">SINCE 1988</text>
+  <text x="100" y="72" text-anchor="middle" font-size="20" fill="#c9a24b">❧</text>
+</svg>

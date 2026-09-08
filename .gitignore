@@ -1,0 +1,7 @@
+# OS / editor artefacts (site itself needs no build and no dependencies)
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.swp
+*~
+.vscode/
