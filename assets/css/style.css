@@ -432,12 +432,40 @@ footer a:hover{color:var(--gold-2)}
   .fab-stack{right:12px;bottom:12px}
   .topbar .hide-m{display:none}
 }
-/* ---------- small phones ---------- */
+/* ---------- refined mobile experience ---------- */
 @media(max-width:560px){
+  body{font-size:15px}
+  .section{padding:2.8rem 0}
+  .display{font-size:2.1rem;letter-spacing:0}
+  .h2{font-size:1.62rem}
+  .lede{font-size:.96rem}
+  .eyebrow{font-size:.66rem;letter-spacing:.24em}
+  .btn{padding:.85rem 1.4rem;font-size:.76rem;letter-spacing:.14em}
+  /* topbar: slim single-line phones bar */
+  .topbar{font-size:.72rem;padding:.4rem 0}
+  .topbar .wrap{justify-content:center;text-align:center;line-height:1.5}
+  .topbar .wrap>span:first-child{display:none}
+  /* header: slimmer lockup, sub-line tucked away */
+  .nav{padding:.45rem 0}
+  .brand-logo{height:46px;width:46px}
+  .brand-text b{font-size:1.08rem}
+  .brand-text small{display:none}
+  .nav-cta .btn{padding:.65rem 1rem}
   .nav-cta .btn-solid{display:none}
-  .topbar .wrap{justify-content:center;text-align:center}
+  /* hero: compact, calm, stacked */
+  .hero{min-height:78svh}
+  .hero-inner{padding:2.6rem 0 2rem}
+  .hero-badge{font-size:.64rem;letter-spacing:.22em}
+  .hero h1{margin:.9rem 0 .7rem}
+  .hero-sub{font-size:.95rem}
+  .hero-actions{margin-top:1.3rem}
   .hero-actions .btn{flex:1 1 100%;justify-content:center}
-  .hero-meta{gap:1.1rem}
+  .hero-meta{flex-direction:column;gap:.65rem;margin-top:1.6rem;padding-top:1.2rem}
+  .hero-meta div b{font-size:1rem}
+  .scroll-cue{margin-top:1.4rem}
+  /* content rhythm: lighter, airier */
+  .tile{min-height:200px}
+  .dish img{height:180px}
   .event-row{gap:.8rem;padding:1.1rem .2rem}
   .event-row .idx{width:38px;font-size:1.6rem}
   .event-row .arr{width:44px;height:44px}
@@ -445,4 +473,12 @@ footer a:hover{color:var(--gold-2)}
   .menu-item .add{align-self:flex-start}
   .c-card a.tel{font-size:1.15rem}
   .quote-summary .btn{width:100%;justify-content:center}
+  .foot-grid{gap:1.6rem;padding:2.4rem 0 1.4rem}
+  .fab{width:52px;height:52px}
+  /* category pills become swipeable rows, never walls */
+  .cats,.filters{flex-wrap:nowrap;overflow-x:auto;margin-inline:-4vw;padding:.7rem 4vw;scrollbar-width:none}
+  .cats::-webkit-scrollbar,.filters::-webkit-scrollbar{display:none}
+  .cats .cat,.filters .cat{flex:0 0 auto}
+  /* prevent iOS auto-zoom on form focus */
+  .field input,.field select,.field textarea,.searchbar input,.searchbar select{font-size:16px}
 }
