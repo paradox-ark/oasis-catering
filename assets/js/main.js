@@ -101,22 +101,24 @@
       if(sel){const o=document.createElement("option");o.value=c;o.textContent=c;sel.appendChild(o);}
     });
     if(sel) sel.insertAdjacentHTML("afterbegin",`<option value="">All categories</option>`);
+    function resetMenuFilters(){if(q)q.value="";if(sel)sel.value="";if(catNav)catNav.querySelectorAll(".cat").forEach(x=>x.classList.toggle("on",x.dataset.cat===""));}
     function render(){
       const term=(q&&q.value||"").trim().toLowerCase();
       const active=catNav?((catNav.querySelector(".cat.on")||{}).dataset||{}).cat:"";
       const only=sel&&sel.value?sel.value:active;
       let total=0;
-      menuRoot.innerHTML=MENU.filter(([c])=>!only||c===only).map(([c,sub,items])=>{
+      menuRoot.innerHTML=MENU.map((m,k)=>[m,k]).filter(([[c]])=>!only||c===only).map(([[c,sub,items],k])=>{
         const hit=items.filter(n=>!term||n.toLowerCase().includes(term));
         if(term&&!hit.length) return "";
         total+=hit.length;
         return `<div class="menu-block" id="cat-${c.replace(/[^a-z]+/gi,"-")}">
-          <div class="kicker-row"><div><span class="eyebrow">${sub}</span><h2 class="h2">${c}</h2></div>
-          <span class="pill">${hit.length} items</span></div>
+          <div class="kicker-row"><div><span class="eyebrow">${String(k+1).padStart(2,"0")} · ${sub}</span><h2 class="h2">${c}</h2></div>
+          <span class="pill">${hit.length} item${hit.length===1?"":"s"}</span></div>
           <div class="menu-grid">${hit.map(n=>`<div class="menu-item"><div><b>${n}</b><small>${c}</small></div><button class="add" data-add="${n}">+ Add</button></div>`).join("")}</div>
         </div>`;
-      }).join("")||`<div class="form-card"><h3 style="font-family:var(--font-display);color:var(--maroon)">No dishes match “${esc(q.value)}”.</h3><p class="form-note">Try a shorter word — e.g. “karahi”, “kebab”, “biryani” — or browse a category.</p></div>`;
+      }).join("")||`<div class="form-card center"><h3 style="font-family:var(--font-display);color:var(--maroon)">No dishes match “${esc(q.value)}”.</h3><p class="form-note">Try a shorter word — e.g. “karahi”, “kebab”, “biryani” — or browse a category.</p><p class="mt"><button class="btn btn-outline btn-sm" id="clearSearch">Clear search ✕</button></p></div>`;
       const cnt=$("#menuCount"); if(cnt) cnt.textContent=term||only?`${total} dish${total===1?"":"es"} shown`:`${MENU.reduce((a,[,,i])=>a+i.length,0)} dishes · ${MENU.length} categories`;
+      const cs=$("#clearSearch"); if(cs) cs.addEventListener("click",()=>{resetMenuFilters();render();});
       $$("#menuRoot [data-add]").forEach(b=>b.addEventListener("click",()=>toggleAdd(b.dataset.add)));
       paintAdds();
     }
@@ -218,7 +220,7 @@
       if(!d.name||!d.phone){flash("Please add your name and phone number so we can call you back.");return;}
       const msg=decodeURIComponent(quoteText(d)).replace(/%0A/g,"\n");
       const box=$("#quoteDone");
-      if(box){box.classList.add("show");box.innerHTML=`<b style="font-family:var(--font-display);font-size:1.2rem;color:#fff">Shukriya, ${esc(d.name.split(" ")[0])} — your enquiry is ready.</b><p style="margin:.5rem 0 1rem">Choose how to send it. No account needed.</p><div style="display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn btn-gold btn-sm" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${quoteText(d)}">Send via WhatsApp</a><a class="btn btn-ghost btn-sm" href="mailto:oasiscatering.pk@gmail.com?subject=${encodeURIComponent("Quotation request — "+d.name)}&body=${encodeURIComponent(msg)}">Send via Email</a></div>`;box.scrollIntoView({behavior:"smooth"});}
+      if(box){box.classList.add("show");box.innerHTML=`<b style="font-family:var(--font-display);font-size:1.2rem;color:#fff">Shukriya, ${esc(d.name.split(" ")[0])} — your enquiry is ready.</b><p style="margin:.5rem 0 1rem">Choose how to send it. No account needed.</p><div style="display:flex;gap:.6rem;flex-wrap:wrap"><a class="btn btn-gold btn-sm" target="_blank" rel="noopener" href="https://wa.me/${WA}?text=${quoteText(d)}"><img src="assets/images/icons/whatsapp-maroon.svg" alt=""> Send via WhatsApp</a><a class="btn btn-ghost btn-sm" href="mailto:oasiscatering.pk@gmail.com?subject=${encodeURIComponent("Quotation request — "+d.name)}&body=${encodeURIComponent(msg)}">Send via Email</a></div>`;box.scrollIntoView({behavior:"smooth"});}
       try{localStorage.removeItem(KEY);}catch{}
     });
   }
