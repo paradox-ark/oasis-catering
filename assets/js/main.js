@@ -26,6 +26,8 @@
 
   /* ---------- hero slideshow ---------- */
   const slides=$$(".hero-slides img"), dotsWrap=$("#heroDots");
+  // phones: portrait-framed crops of the same slides — motion kept, framing fixed
+  if(slides.length&&matchMedia("(max-width:560px)").matches){slides.forEach(im=>{im.src=im.src.replace("w=1800","w=900&h=1400");});}
   if(slides.length){
     let i=0;
     slides[0].classList.add("on");

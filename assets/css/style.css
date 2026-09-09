@@ -454,10 +454,9 @@ footer a:hover{color:var(--gold-2)}
   .brand-text small{display:none}
   .nav-cta .btn{padding:.65rem 1rem}
   .nav-cta .btn-solid{display:none}
-  /* hero: cinematic but calm */
+  /* hero: same living slideshow, portrait-framed */
   .hero{min-height:64svh}
-  .hero-slides{display:none}
-  .hero::before{display:block}
+  .hero-slides img{object-position:center 30%}
   .hero::after{background:linear-gradient(180deg,rgba(38,6,12,.72) 0%,rgba(38,6,12,.5) 45%,rgba(38,6,12,.94) 100%)}
   .hero-inner{padding:2.2rem 0 1.8rem}
   .hero-badge{font-size:.62rem;letter-spacing:.2em;padding:.45rem .9rem}
@@ -470,7 +469,8 @@ footer a:hover{color:var(--gold-2)}
   .hero-meta div+div{border-left:1px solid rgba(255,255,255,.25)}
   .hero-meta div b{font-size:.85rem}
   .hero-meta div span{font-size:.56rem;letter-spacing:.12em}
-  .hero-dots,.scroll-cue{display:none}
+  .hero-dots{margin-top:1rem}
+  .scroll-cue{display:none}
   .page-hero .wrap{padding:2.8rem 0 2.2rem}
   /* content rhythm: lighter, airier */
   .tile{min-height:200px}
