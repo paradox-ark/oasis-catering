@@ -102,6 +102,8 @@ h1,h2,h3{font-family:var(--font-display);line-height:1.08;font-weight:600;letter
 }
 .brand{display:flex;align-items:center;gap:.9rem;flex:0 0 auto;min-width:0}
 .brand-logo{height:60px;width:auto;max-width:200px;flex:0 0 auto;border-radius:14px;object-fit:contain;object-position:center;background:#fff;padding:6px;box-shadow:0 0 0 2px #fff,0 0 0 4px var(--gold),0 14px 28px -14px rgba(43,6,12,.55)}
+header .brand-logo{background:transparent;padding:0;box-shadow:none;border-radius:0;height:64px;max-width:230px}
+.brand-since{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:#a5761f;font-weight:600;white-space:nowrap}
 .brand-text{display:flex;flex-direction:column;line-height:1.25;min-width:0}
 .brand-text b{font-family:var(--font-display);font-style:italic;font-weight:700;font-size:1.45rem;color:var(--maroon-900);white-space:nowrap}
 .brand-text b span{color:#a5761f}
@@ -111,7 +113,7 @@ footer .brand-text b{color:#fff}
 footer .brand-text b span{color:var(--gold-2)}
 footer .brand-text small{color:#c8a87e}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.55rem 0}
-@media(max-width:640px){.brand-logo{height:48px;max-width:160px}.brand-text b{font-size:1.15rem}.brand-text small{font-size:.5rem;letter-spacing:.22em}footer .brand-logo{width:130px}}
+@media(max-width:640px){.brand-logo{height:48px;max-width:160px}header .brand-logo{height:52px;max-width:170px}.brand-since{font-size:.58rem;letter-spacing:.24em}.brand-text b{font-size:1.15rem}.brand-text small{font-size:.5rem;letter-spacing:.22em}footer .brand-logo{width:130px}}
 .nav-links{display:flex;align-items:center;gap:1.35rem;list-style:none}
 .nav-links a{font-size:.82rem;letter-spacing:.16em;text-transform:uppercase;color:#4a3234;position:relative;padding:.4rem 0}
 .nav-links a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:linear-gradient(90deg,var(--maroon),var(--gold));transition:.3s}
@@ -458,6 +460,8 @@ footer a:hover{color:var(--gold-2)}
   /* header: slimmer lockup, sub-line tucked away */
   .nav{padding:.45rem 0}
   .brand-logo{height:44px;max-width:150px;padding:4px}
+  header .brand-logo{height:46px;max-width:150px;padding:0}
+  .brand-since{font-size:.55rem;letter-spacing:.22em}
   .brand-text b{font-size:1.08rem}
   .brand-text small{display:none}
   .nav-cta .btn{padding:.65rem 1rem}
