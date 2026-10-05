@@ -120,6 +120,7 @@ footer .brand-text small{color:#c8a87e}
 .nav-links a:hover::after,.nav-links a.active::after{width:100%}
 .nav-links a.active{color:var(--maroon)}
 .nav-cta{display:flex;gap:.6rem;align-items:center}
+.nav-call{display:none}
 .burger{display:none;background:none;border:1px solid var(--line);border-radius:12px;padding:.6rem .7rem;cursor:pointer}
 .burger span{display:block;width:22px;height:2px;background:var(--maroon-900);margin:5px 0;border-radius:2px}
 /* mobile drawer */
@@ -430,6 +431,8 @@ footer a:hover{color:var(--gold-2)}
   .nav-links{display:none}
   .burger{display:block}
   .nav-cta .btn-outline{display:none}
+  .nav-call{display:grid;place-items:center;width:46px;height:46px;flex:0 0 auto;border-radius:50%;background:var(--maroon);box-shadow:0 10px 22px -10px rgba(122,18,32,.6)}
+  .nav-call img{width:20px;height:20px;display:block}
   .hero-side{display:none}
 }
 @media(max-width:640px){
@@ -459,8 +462,11 @@ footer a:hover{color:var(--gold-2)}
   .topbar .wrap>span:first-child{display:none}
   /* header: slimmer lockup, sub-line tucked away */
   .nav{padding:.45rem 0}
+  .brand{flex:1 1 auto;min-width:0}
+  .nav-cta{gap:.5rem}
   .brand-logo{height:44px;max-width:150px;padding:4px}
-  header .brand-logo{height:46px;max-width:150px;padding:0}
+  header .brand-logo{height:46px;max-width:132px;padding:0}
+  .nav-call{width:42px;height:42px}
   .brand-since{font-size:.55rem;letter-spacing:.22em}
   .brand-text b{font-size:1.08rem}
   .brand-text small{display:none}
