@@ -24,13 +24,14 @@
   });
 
   /* ---------- scroll reveal ---------- */
+  document.documentElement.classList.add("js-ready");
   if ("IntersectionObserver" in window) {
     const io = new IntersectionObserver(es => es.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add("in");
         io.unobserve(e.target);
       }
-    }), { threshold: 0.08 });
+    }), { threshold: 0.05, rootMargin: "0px 0px 60px 0px" });
     $$(".reveal").forEach(el => io.observe(el));
   } else {
     $$(".reveal").forEach(el => el.classList.add("in"));
@@ -301,17 +302,6 @@
     $$("[data-video]").forEach(c => {
       c.setAttribute("tabindex", "0");
       c.setAttribute("role", "button");
-
-      const thumbVid = c.querySelector("video.g-video-thumb");
-      if (thumbVid) {
-        c.addEventListener("mouseenter", () => {
-          thumbVid.play().catch(() => {});
-        });
-        c.addEventListener("mouseleave", () => {
-          thumbVid.pause();
-          try { thumbVid.currentTime = 0.1; } catch (e) {}
-        });
-      }
 
       const openVideo = () => {
         const src = c.dataset.video;
