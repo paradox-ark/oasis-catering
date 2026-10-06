@@ -14,7 +14,7 @@
 <!-- Fonts & Styles -->
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=15">
+<link rel="stylesheet" href="assets/css/style.css?v=16">
 <link rel="icon" href="assets/images/favicon.png" type="image/png">
 <!-- Schema.org LocalBusiness -->
 <script type="application/ld+json">
@@ -109,9 +109,26 @@
 <!-- ============ HERO ============ -->
 <section class="hero">
   <div class="hero-slides">
-    <img src="assets/media/photos/oasis-event-01.jpg" alt="Outdoor wedding marquee setup by Oasis with fairy lights in Islamabad">
-    <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=1800&auto=format&fit=crop" alt="Authentic celebratory Pakistani Biryani spread" loading="lazy">
-    <img src="assets/media/photos/oasis-event-02.jpg" alt="Royal musical evening setup by Oasis with truss lighting" loading="lazy">
+    <!-- Slide 1: Grand Marquee Stage Setup (wide landscape for desktop, portrait for mobile) -->
+    <picture class="hero-slide">
+      <source media="(max-width: 768px)" srcset="assets/media/photos/oasis-event-01.jpg">
+      <img src="assets/media/photos/oasis-event-14.jpg" alt="Luxury wedding marquee and stage setup by Oasis in Islamabad">
+    </picture>
+    <!-- Slide 2: Grand Banquet Hall & Warm Ambiance -->
+    <picture class="hero-slide">
+      <source media="(max-width: 768px)" srcset="assets/images/oasis-pakistani-biryani.jpg">
+      <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=85&w=2400&auto=format&fit=crop" alt="Grand celebration hall and royal event marquee by Oasis">
+    </picture>
+    <!-- Slide 3: Illuminated Evening Lawn Marquee -->
+    <picture class="hero-slide">
+      <source media="(max-width: 768px)" srcset="assets/media/photos/oasis-event-02.jpg">
+      <img src="assets/media/photos/oasis-event-07.jpg" alt="Illuminated lawn marquee and outdoor wedding setup by Oasis in Islamabad">
+    </picture>
+    <!-- Slide 4: Ballroom Chandeliers & Banquet -->
+    <picture class="hero-slide">
+      <source media="(max-width: 768px)" srcset="assets/media/photos/oasis-event-05.jpg">
+      <img src="assets/media/photos/oasis-event-10.jpg" alt="Indoor royal banquet hall and crystal chandelier setup by Oasis">
+    </picture>
   </div>
   <div class="wrap hero-inner">
     <span class="hero-badge">✦ &nbsp;Islamabad · Established 1988&nbsp; ✦</span>
@@ -125,6 +142,14 @@
     <div class="hero-dots" id="heroDots"></div>
   </div>
 </section>
+
+<!-- ============ ROLLING TICKER ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp; Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp;</span>
+    <span>Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp; Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp;</span>
+  </div>
+</div>
 
 <!-- ============ AT A GLANCE (3 PILLARS) ============ -->
 <section class="section" style="background:#fff;border-bottom:1px solid var(--line)">
@@ -166,7 +191,7 @@
       <!-- Dish 1 -->
       <article class="dish-card">
         <div class="img-wrap">
-          <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=900&auto=format&fit=crop" alt="Traditional Pakistani Chicken and Mutton Biryani in Deg" loading="lazy">
+          <img src="assets/images/oasis-pakistani-biryani.jpg" alt="Authentic Pakistani Mutton and Beef Deg Biryani with Saffron Dum and Long-Grain Basmati Rice" loading="lazy">
           <span class="dish-tag">Signature Rice</span>
         </div>
         <div class="dish-body">
@@ -243,7 +268,7 @@
         <span class="eyebrow">Real Setups in Islamabad</span>
         <h2 class="h2">Events Held by <span class="script">Oasis</span></h2>
       </div>
-      <a class="btn btn-outline btn-sm" href="gallery.html">View All Photos & Videos →</a>
+      <a class="btn btn-outline btn-sm" href="gallery.html">View All 30 Photos & 16 Reels →</a>
     </div>
 
     <div class="g-grid reveal">
@@ -252,17 +277,69 @@
         <figcaption>Hilltop Outdoor Marquee & Fairy Lights</figcaption>
       </figure>
       <figure class="g-item">
+        <img src="assets/media/photos/oasis-event-07.jpg" alt="Grand evening lawn marquee with warm canopy lighting by Oasis" loading="lazy">
+        <figcaption>Grand Evening Lawn Marquee</figcaption>
+      </figure>
+      <figure class="g-item">
         <img src="assets/media/photos/oasis-event-03.jpg" alt="Wedding dinner setup with golden Chiavari chairs and floral centerpieces" loading="lazy">
         <figcaption>Luxury Wedding Dinner & Chiavari Seating</figcaption>
+      </figure>
+      <figure class="g-item">
+        <img src="assets/media/photos/oasis-event-14.jpg" alt="Royal golden bridal stage with plush velvet seating by Oasis" loading="lazy">
+        <figcaption>Royal Bridal Stage & Golden Arch</figcaption>
       </figure>
       <figure class="g-item">
         <img src="assets/media/photos/oasis-event-04.jpg" alt="Mehndi garden celebration setup by Oasis with gold accents" loading="lazy">
         <figcaption>Garden Mehndi & Haldi Festive Décor</figcaption>
       </figure>
       <figure class="g-item">
-        <img src="assets/media/photos/oasis-event-05.jpg" alt="Royal Baraat stage and velvet seating arrangement by Oasis" loading="lazy">
-        <figcaption>Royal Baraat Stage & Floral Pillars</figcaption>
+        <img src="assets/media/photos/oasis-event-10.jpg" alt="Indoor royal banquet hall with crystal chandeliers by Oasis" loading="lazy">
+        <figcaption>Ballroom Crystal Chandeliers & Banquet</figcaption>
       </figure>
+      <figure class="g-item">
+        <img src="assets/media/photos/oasis-event-08.jpg" alt="Elaborate floral walkway and red carpet entrance by Oasis" loading="lazy">
+        <figcaption>Red Carpet Entrance & Floral Walkway</figcaption>
+      </figure>
+      <figure class="g-item">
+        <img src="assets/media/photos/oasis-event-13.jpg" alt="Outdoor live buffet setup with warm lighting and chafing dishes" loading="lazy">
+        <figcaption>Outdoor Live Buffet & Catering Service</figcaption>
+      </figure>
+    </div>
+
+    <!-- Live Event Reels Highlights on Homepage -->
+    <div style="margin-top:2.8rem" class="reveal">
+      <div class="kicker-row" style="margin-bottom:1.2rem">
+        <div>
+          <span class="eyebrow">Real Video Reels</span>
+          <h3 class="h3" style="font-size:1.45rem">Watch Oasis <span class="script" style="color:var(--gold-2)">In Motion</span></h3>
+        </div>
+        <a class="btn btn-outline btn-sm" href="gallery.html?tab=videos">Watch All 16 Reels →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem">
+        <div style="background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--line-soft)">
+          <div style="position:relative;background:#000;aspect-ratio:16/10;overflow:hidden">
+            <video controls preload="metadata" playsinline poster="assets/media/photos/oasis-event-01.jpg" style="width:100%;height:100%;object-fit:cover">
+              <source src="assets/media/videos/oasis-event-video-01.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding:1rem 1.2rem">
+            <h4 style="font-size:1.02rem;color:var(--maroon-900);margin-bottom:.2rem">Hilltop Marquee & Evening Atmosphere</h4>
+            <p style="font-size:.85rem;color:var(--text-muted);margin:0">Live evening marquee setup in Islamabad with fairy lights and guest dining.</p>
+          </div>
+        </div>
+
+        <div style="background:#fff;border-radius:14px;overflow:hidden;box-shadow:var(--shadow-sm);border:1px solid var(--line-soft)">
+          <div style="position:relative;background:#000;aspect-ratio:16/10;overflow:hidden">
+            <video controls preload="metadata" playsinline poster="assets/media/photos/oasis-event-04.jpg" style="width:100%;height:100%;object-fit:cover">
+              <source src="assets/media/videos/oasis-event-video-04.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div style="padding:1rem 1.2rem">
+            <h4 style="font-size:1.02rem;color:var(--maroon-900);margin-bottom:.2rem">Festive Mehndi & Haldi Décor</h4>
+            <p style="font-size:.85rem;color:var(--text-muted);margin:0">Vibrant yellow florals, low seating, and stage lighting for Mehndi celebrations.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -364,6 +441,6 @@
   <a class="fab wa" href="https://wa.me/923295977659?text=Assalam-o-Alaikum%20Oasis!%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener" aria-label="WhatsApp Oasis"><img src="assets/images/icons/whatsapp-white.svg" alt="WhatsApp"></a>
 </div>
 
-<script src="assets/js/main.js?v=15"></script>
+<script src="assets/js/main.js?v=16"></script>
 </body>
 </html>

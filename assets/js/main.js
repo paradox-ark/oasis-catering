@@ -37,7 +37,7 @@
   }
 
   /* ---------- hero slideshow ---------- */
-  const slides = $$(".hero-slides img"), dotsWrap = $("#heroDots");
+  const slides = $$(".hero-slides .hero-slide, .hero-slides > img"), dotsWrap = $("#heroDots");
   if (slides.length) {
     let cur = 0;
     slides[0].classList.add("on");
