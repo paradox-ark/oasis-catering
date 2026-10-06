@@ -562,6 +562,15 @@ header .brand-logo:hover {
   margin-bottom: 0.5rem;
   line-height: 1.5;
 }
+.hero-sub-line {
+  display: block;
+}
+.hero-sub-highlight {
+  display: block;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 0.18rem;
+}
 .hero-bottom-pinned {
   margin-top: auto;
   display: flex;
@@ -1595,17 +1604,71 @@ html.js-ready .reveal.in {
     flex-direction: column;
   }
   .hero-inner {
-    padding: clamp(0.9rem, 2vh, 1.4rem) 0 clamp(0.7rem, 1.8vh, 1.2rem);
+    padding: clamp(0.9rem, 2vh, 1.4rem) clamp(1rem, 4vw, 1.6rem) clamp(0.7rem, 1.8vh, 1.2rem);
+    align-items: center;
+    text-align: center;
+  }
+  .hero-top-pinned {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .hero-badge {
+    margin-inline: auto;
+    text-align: center;
   }
   .hero h1 {
     font-size: clamp(1.75rem, 5.8vw, 2.3rem);
     line-height: 1.14;
     margin: 0.5rem 0 0.45rem;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 18ch;
   }
   .hero-sub {
     font-size: 0.92rem;
     line-height: 1.48;
     margin-bottom: 0.5rem;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 44ch;
+  }
+  .hero-bottom-pinned {
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.45rem;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: min(84vw, 270px);
+    max-width: 270px;
+    padding: 0.54rem 1.1rem;
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 999px;
+    box-sizing: border-box;
+    flex: none;
+  }
+  .hero-actions .btn:first-child {
+    width: min(84vw, 270px);
+    max-width: 270px;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+  }
+  .hero-dots {
+    justify-content: center;
+    margin-top: 0.35rem;
   }
   .pdf-banner {
     flex-direction: column;
@@ -1670,28 +1733,6 @@ html.js-ready .reveal.in {
     font-size: 0.74rem;
     letter-spacing: 0.08em;
   }
-  .hero-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    width: 100%;
-  }
-  .hero-actions .btn {
-    flex: 1 1 calc(50% - 0.5rem);
-    min-width: 125px;
-    padding: 0.56rem 0.75rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
-    white-space: normal;
-    text-align: center;
-    line-height: 1.25;
-  }
-  .hero-actions .btn:first-child {
-    flex: 1 1 100%;
-    padding: 0.66rem 1rem;
-    font-size: 0.76rem;
-    letter-spacing: 0.08em;
-  }
   .hero {
     height: calc(100vh - 138px);
     height: calc(100svh - 138px);
@@ -1701,22 +1742,75 @@ html.js-ready .reveal.in {
     flex-direction: column;
   }
   .hero-inner {
-    padding: clamp(0.75rem, 1.8vh, 1.2rem) 0 clamp(0.6rem, 1.5vh, 1rem);
+    padding: clamp(0.75rem, 1.8vh, 1.2rem) clamp(1rem, 4vw, 1.5rem) clamp(0.6rem, 1.5vh, 1rem);
+    align-items: center;
+    text-align: center;
   }
-  .hero h1 {
-    font-size: clamp(1.6rem, 6.8vw, 2rem);
-    line-height: 1.14;
-    margin: 0.45rem 0 0.4rem;
+  .hero-top-pinned {
+    align-items: center;
+    text-align: center;
+    width: 100%;
   }
   .hero-badge {
     font-size: 0.64rem;
     padding: 0.28rem 0.65rem;
     letter-spacing: 0.12em;
+    margin-inline: auto;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: clamp(1.6rem, 6.8vw, 2rem);
+    line-height: 1.14;
+    margin: 0.45rem 0 0.4rem;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 16ch;
   }
   .hero-sub {
-    font-size: 0.86rem;
+    font-size: clamp(0.72rem, 2.75vw, 0.82rem);
     line-height: 1.45;
     margin-bottom: 0.45rem;
+    text-align: center;
+    margin-inline: auto;
+    max-width: 52ch;
+  }
+  .hero-bottom-pinned {
+    align-items: center;
+    width: 100%;
+    margin-top: auto;
+  }
+  .hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.42rem;
+    width: 100%;
+  }
+  .hero-actions .btn {
+    width: min(84vw, 265px);
+    max-width: 265px;
+    padding: 0.52rem 1rem;
+    font-size: 0.73rem;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    text-align: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 999px;
+    box-sizing: border-box;
+    flex: none;
+  }
+  .hero-actions .btn:first-child {
+    width: min(84vw, 265px);
+    max-width: 265px;
+    padding: 0.58rem 1rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+  }
+  .hero-dots {
+    justify-content: center;
+    margin-top: 0.35rem;
+    width: 100%;
   }
   .marquee {
     padding: 0.65rem 0;
@@ -1771,8 +1865,17 @@ html.js-ready .reveal.in {
     padding: 0.38rem 0.62rem;
   }
   .hero-actions .btn {
-    flex: 1 1 100%;
-    padding: 0.58rem 0.8rem;
+    width: min(88vw, 250px);
+    max-width: 250px;
+    padding: 0.5rem 0.85rem;
+    font-size: 0.71rem;
+    flex: none;
+  }
+  .hero-actions .btn:first-child {
+    width: min(88vw, 250px);
+    max-width: 250px;
+    padding: 0.56rem 0.85rem;
+    font-size: 0.73rem;
   }
   .hero h1 {
     font-size: 1.5rem;
