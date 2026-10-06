@@ -1,5 +1,15 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/about", "destination": "/", "permanent": true },
+    { "source": "/catering", "destination": "/events", "permanent": true },
+    { "source": "/services", "destination": "/events", "permanent": true },
+    { "source": "/dishes", "destination": "/menu", "permanent": true },
+    { "source": "/videos", "destination": "/gallery", "permanent": true },
+    { "source": "/testimonials", "destination": "/events", "permanent": true },
+    { "source": "/faq", "destination": "/contact", "permanent": true },
+    { "source": "/quote", "destination": "/contact#book", "permanent": true }
+  ]
 }
