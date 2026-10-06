@@ -297,14 +297,40 @@
   const vm = $("#videoModal");
   if (vm) {
     const frame = $("#videoFrame"), cap = $("#videoCap");
+    const vBox = vm.querySelector(".video-box");
     $$("[data-video]").forEach(c => {
       c.setAttribute("tabindex", "0");
       c.setAttribute("role", "button");
+
+      const thumbVid = c.querySelector("video.g-video-thumb");
+      if (thumbVid) {
+        c.addEventListener("mouseenter", () => {
+          thumbVid.play().catch(() => {});
+        });
+        c.addEventListener("mouseleave", () => {
+          thumbVid.pause();
+          try { thumbVid.currentTime = 0.1; } catch (e) {}
+        });
+      }
+
       const openVideo = () => {
         const src = c.dataset.video;
         const title = c.dataset.title || "Oasis Event Video";
         if (cap) cap.textContent = title;
-        frame.innerHTML = `<video src="${src}" controls autoplay playsinline style="width:100%;aspect-ratio:16/9;background:#000"></video>`;
+        if (vBox) {
+          vBox.classList.remove("is-portrait", "is-landscape");
+        }
+        frame.innerHTML = `<video src="${src}" controls autoplay playsinline style="width:100%;height:100%;background:#000;display:block;outline:none"></video>`;
+        const vid = frame.querySelector("video");
+        if (vid) {
+          vid.addEventListener("loadedmetadata", () => {
+            const isPortrait = vid.videoHeight > vid.videoWidth;
+            if (vBox) {
+              vBox.classList.toggle("is-portrait", isPortrait);
+              vBox.classList.toggle("is-landscape", !isPortrait);
+            }
+          });
+        }
         vm.classList.add("open");
         document.body.style.overflow = "hidden";
       };
@@ -322,6 +348,7 @@
     function closeVm() {
       vm.classList.remove("open");
       frame.innerHTML = "";
+      if (vBox) vBox.classList.remove("is-portrait", "is-landscape");
       document.body.style.overflow = "";
     }
   }
