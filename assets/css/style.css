@@ -533,15 +533,18 @@ header .brand-logo:hover {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 100%;
-  padding: clamp(1rem, 2.5vh, 1.8rem) 0 clamp(0.8rem, 2vh, 1.4rem);
+  width: min(var(--max), 92vw);
+  margin-inline: auto;
+  padding: clamp(1.2rem, 3vh, 2.4rem) clamp(0.75rem, 2vw, 1.6rem) clamp(1rem, 2.5vh, 1.8rem);
   position: relative;
   z-index: 2;
+  box-sizing: border-box;
 }
 .hero-top-pinned {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 100%;
 }
 .hero-badge {
   display: inline-flex;
@@ -549,7 +552,7 @@ header .brand-logo:hover {
   gap: 0.5rem;
   border: 1px solid rgba(233, 207, 138, 0.55);
   border-radius: 999px;
-  padding: 0.32rem 0.85rem;
+  padding: 0.35rem 0.95rem;
   font-size: clamp(0.68rem, 0.85vw, 0.74rem);
   letter-spacing: 0.16em;
   text-transform: uppercase;
@@ -558,7 +561,9 @@ header .brand-logo:hover {
   backdrop-filter: blur(8px);
 }
 .hero h1 {
-  max-width: 17ch;
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  line-height: 1.12;
+  max-width: 18ch;
   margin: 0.65rem 0 0.55rem;
   text-shadow: 0 4px 25px rgba(0, 0, 0, 0.45);
 }

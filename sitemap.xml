@@ -1,40 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://oasiscaterer.com/</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/images/oasis-pakistani-biryani.jpg</image:loc>
+      <image:title>Oasis Caterer Authentic Pakistani Deg Biryani and Rice Specialties</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/media/photos/oasis-event-14.jpg</image:loc>
+      <image:title>Luxury Wedding Marquee and Bridal Stage Setup by Oasis Caterer Islamabad</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oasiscaterer.com/menu.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/images/oasis-pakistani-biryani.jpg</image:loc>
+      <image:title>Oasis Caterer Complete Catering Menu</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/images/oasis-chicken-karahi.jpg</image:loc>
+      <image:title>Authentic Chicken and Mutton Karahi Desi Curries</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/images/oasis-charcoal-bbq.jpg</image:loc>
+      <image:title>Live Charcoal Barbecue Chicken Tikka and Seekh Kebabs</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/images/oasis-gulab-jamun.jpg</image:loc>
+      <image:title>Royal Shahi Desserts Gulab Jamun and Shahi Tukra</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oasiscaterer.com/events.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/media/photos/oasis-event-01.jpg</image:loc>
+      <image:title>Hilltop Outdoor Marquee and Wedding Lighting Setup Islamabad</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/media/photos/oasis-event-05.jpg</image:loc>
+      <image:title>Baraat and Walima Grand Stage Setup Oasis Caterer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/media/photos/oasis-event-06.jpg</image:loc>
+      <image:title>Grand Indoor Marquee and Crystal Chandeliers</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oasiscaterer.com/gallery.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/media/photos/oasis-event-07.jpg</image:loc>
+      <image:title>Grand Evening Lawn Marquee Oasis Caterer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/media/photos/oasis-event-03.jpg</image:loc>
+      <image:title>Wedding Dining Setup with Golden Chiavari Chairs</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oasiscaterer.com/contact.html</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://oasiscaterer.com/assets/docs/oasis-catering-menu.pdf</loc>
-    <lastmod>2026-10-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://oasiscaterer.com/assets/media/photos/oasis-event-03.jpg</image:loc>
+      <image:title>Oasis Caterer Office and Booking Consultation</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://oasiscaterer.com/privacy.html</loc>
