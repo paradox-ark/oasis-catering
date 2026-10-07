@@ -6,11 +6,11 @@
   "use strict";
 
   // Injected IDs (populated via window global or direct config)
-  var GA_MEASUREMENT_ID = window.GA_MEASUREMENT_ID || ""; // e.g. "G-XXXXXXXXXX"
+  var GA_MEASUREMENT_ID = window.GA_MEASUREMENT_ID || "G-7VFFMGLN1S";
   var META_PIXEL_ID = window.META_PIXEL_ID || "";         // e.g. "123456789012345"
 
   // 1. Google Analytics 4 Loader
-  if (GA_MEASUREMENT_ID && !window._ga_loaded) {
+  if (GA_MEASUREMENT_ID && !window._ga_loaded && !window.gtag) {
     window._ga_loaded = true;
     var gaScript = document.createElement("script");
     gaScript.async = true;
