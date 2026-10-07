@@ -507,22 +507,17 @@ header .brand-logo:hover {
 
 /* ---------- Hero (Executive Luxury Presentation) ---------- */
 .hero {
-  position: relative;
-  min-height: 600px;
+  height: calc(100vh - 180px);
+  height: calc(100svh - 180px);
+  min-height: 460px;
+  max-height: 700px;
   display: flex;
   flex-direction: column;
   color: #fff;
   isolation: isolate;
   overflow: hidden;
   background: var(--maroon-950);
-}
-
-@media (min-width: 769px) {
-  .hero {
-    height: calc(100vh - 120px);
-    max-height: 840px;
-    min-height: 620px;
-  }
+  position: relative;
 }
 
 .hero-slides {
@@ -832,39 +827,21 @@ header .brand-logo:hover {
 
 /* ---------- Rolling Marquee Ticker ---------- */
 .marquee {
-  background: linear-gradient(90deg, #180306 0%, #2b050d 50%, #180306 100%);
+  background: var(--maroon);
   color: #f6e3c2;
   overflow: hidden;
-  padding: 0.85rem 0;
-  border-block: 1px solid rgba(233, 207, 138, 0.4);
+  padding: 0.75rem 0;
+  border-block: 1px solid rgba(233, 207, 138, 0.22);
   position: relative;
   z-index: 5;
   width: 100%;
-  display: flex;
-  align-items: center;
 }
-.marquee-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 6;
-  color: #e8c47e;
-  font-size: 1.5rem;
-  line-height: 1;
-  pointer-events: none;
-  opacity: 0.85;
-  padding: 0 0.6rem;
-  user-select: none;
-}
-.marquee-arrow.left { left: 0; }
-.marquee-arrow.right { right: 0; }
-
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: scroll 26s linear infinite;
-  font-size: clamp(0.74rem, 1vw, 0.84rem);
-  letter-spacing: 0.22em;
+  animation: scroll 28s linear infinite;
+  font-size: clamp(0.75rem, 1.1vw, 0.86rem);
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   white-space: nowrap;
   will-change: transform;
@@ -874,41 +851,15 @@ header .brand-logo:hover {
   padding-right: 2.5rem;
 }
 @keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
-
-/* Arch Transition */
-.hero-arch-transition {
-  position: relative;
-  background: var(--cream);
-  padding-top: 0.6rem;
-  padding-bottom: 0.4rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.hero-scroll-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background: #fdf5ea;
-  border: 1px solid rgba(201, 162, 75, 0.55);
-  color: var(--maroon-900);
-  box-shadow: 0 4px 12px rgba(43, 6, 12, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.85);
-  transition: transform 0.2s ease, background 0.2s ease;
-  margin-top: -12px;
-  position: relative;
-  z-index: 6;
-  text-decoration: none;
-}
-.hero-scroll-btn:hover {
-  transform: translateY(2px);
-  background: #fff;
-  color: var(--gold-dark);
+.marquee b {
+  color: var(--gold-2);
 }
 
 /* Page Hero for Subpages */
@@ -1866,15 +1817,15 @@ html.js-ready .reveal.in {
     display: none;
   }
   .hero {
-    height: auto;
-    min-height: calc(100svh - 110px);
-    max-height: none;
-    padding-top: 1.2rem;
-    padding-bottom: 0.8rem;
+    height: calc(100vh - 145px);
+    height: calc(100svh - 145px);
+    min-height: 450px;
+    max-height: 640px;
+    display: flex;
+    flex-direction: column;
   }
   .hero-inner {
-    padding: clamp(0.8rem, 2vh, 1.2rem) clamp(0.75rem, 3vw, 1.2rem) 0.6rem;
-    gap: 0.8rem;
+    padding: clamp(0.8rem, 2vh, 1.3rem) clamp(0.8rem, 3vw, 1.4rem) clamp(0.6rem, 1.6vh, 1rem);
   }
   .hero-top-pinned {
     align-items: center;
@@ -1968,15 +1919,15 @@ html.js-ready .reveal.in {
     letter-spacing: 0.08em;
   }
   .hero {
-    height: auto;
-    min-height: calc(100svh - 105px);
-    max-height: none;
-    padding-top: 0.85rem;
-    padding-bottom: 0.6rem;
+    height: calc(100vh - 138px);
+    height: calc(100svh - 138px);
+    min-height: 400px;
+    max-height: 560px;
+    display: flex;
+    flex-direction: column;
   }
   .hero-inner {
-    padding: 0.5rem 0.6rem 0.4rem;
-    gap: 0.6rem;
+    padding: clamp(0.6rem, 1.6vh, 0.95rem) clamp(0.6rem, 3vw, 1rem) clamp(0.45rem, 1.2vh, 0.75rem);
   }
   .hero-loc-badge {
     font-size: 0.64rem;
