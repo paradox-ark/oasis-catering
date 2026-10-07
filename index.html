@@ -39,7 +39,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=24">
+<link rel="stylesheet" href="assets/css/style.css?v=25">
 
 <!-- Schema.org JSON-LD -->
 <script type="application/ld+json">
@@ -163,12 +163,17 @@
 
 <!-- Topbar -->
 <div class="topbar">
-  <div class="wrap">
-    <span>Shop 3, Raja Qamar Zaman Market, Near Kuri Road, Islamabad</span>
-    <span>
-      <a href="tel:+923295977659">0329 5977659</a> · <a href="tel:+923055477709">0305 5477709</a>
-      <span class="hide-m">· <a href="https://maps.app.goo.gl/p4Uz4KKKbCZ9YXqn8" target="_blank" rel="noopener">📍 Google Maps</a></span>
-    </span>
+  <div class="wrap topbar-row">
+    <div class="topbar-phones">
+      <a href="tel:+923295977659">📞 0329 5977659</a>
+      <span class="sep">•</span>
+      <a href="tel:+923055477709">0305 5477709</a>
+    </div>
+    <div class="topbar-socials">
+      <a href="https://instagram.com/oasiscatering.pk" target="_blank" rel="noopener" aria-label="Instagram"><img src="assets/images/icons/instagram-white.svg" alt="Instagram" width="15" height="15"></a>
+      <a href="https://facebook.com/oasiscatering.pk" target="_blank" rel="noopener" aria-label="Facebook"><img src="assets/images/icons/facebook-white.svg" alt="Facebook" width="15" height="15"></a>
+      <a href="https://wa.me/923295977659" target="_blank" rel="noopener" aria-label="WhatsApp"><img src="assets/images/icons/whatsapp-white.svg" alt="WhatsApp" width="15" height="15"></a>
+    </div>
   </div>
 </div>
 
@@ -177,7 +182,7 @@
   <div class="wrap nav">
     <a class="brand" href="/" aria-label="Oasis Catering Home">
       <img class="brand-logo" src="assets/images/logo-header.png" alt="Oasis Catering & Event Management" onerror="this.onerror=null;this.src='assets/images/logo.svg'">
-      <span class="brand-since">Since 1988</span>
+      <span class="brand-since">SINCE 1988</span>
     </a>
     <nav aria-label="Main Navigation">
       <ul class="nav-links">
@@ -189,7 +194,7 @@
       </ul>
     </nav>
     <div class="nav-cta">
-      <a class="btn-book-gold" href="/contact#book">Book Now</a>
+      <a class="btn-book-gold" href="/contact#book">BOOK NOW →</a>
       <button class="burger" data-open-drawer aria-label="Open mobile navigation menu">
         <span></span><span></span><span></span>
       </button>
@@ -246,20 +251,70 @@
   </div>
   <div class="wrap hero-inner">
     <div class="hero-top-pinned">
-      <span class="hero-badge">✦ &nbsp;Islamabad · Established 1988&nbsp; ✦</span>
-      <h1 class="display"><span class="sr-only">Oasis Caterer Islamabad — </span>Taste Defines <em>the Occasion.</em></h1>
-      <p class="hero-sub">
-        <span class="hero-sub-line">Authentic Pakistani cuisine, grand marquees,</span>
-        <span class="hero-sub-line">elegant florals and complete event management.</span>
-        <strong class="hero-sub-line hero-sub-highlight">We cater, you celebrate.</strong>
+      <span class="hero-loc-badge">📍 ISLAMABAD &nbsp;•&nbsp; RAWALPINDI</span>
+      <h1 class="hero-title">
+        <span class="sr-only">Oasis Caterer Islamabad — </span>
+        <span class="hero-title-main">Taste Defines <span class="hero-script-the">the</span></span>
+        <span class="hero-script-occasion">Occasion.</span>
+      </h1>
+      <p class="hero-subtext">
+        Authentic Pakistani cuisine, grand marquees,<br>
+        elegant florals and complete event management.
       </p>
-    </div>
-    <div class="hero-bottom-pinned">
-      <div class="hero-actions">
-        <a class="btn btn-gold" href="/contact#book">Book Your Event →</a>
-        <a class="btn btn-ghost" href="/menu">Explore Menu</a>
-        <a class="btn btn-ghost" href="assets/docs/oasis-catering-menu.pdf" download="Oasis-Catering-Menu.pdf">Download Menu (PDF)</a>
+      <div class="hero-ribbon">
+        <span>We cater, you celebrate.</span>
       </div>
+    </div>
+
+    <div class="hero-bottom-pinned">
+      <div class="hero-actions-group">
+        <a class="hero-btn-primary" href="/contact#book">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>BOOK YOUR EVENT →</span>
+        </a>
+        <div class="hero-btn-grid">
+          <a class="hero-btn-sub" href="/menu">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2v6a3 3 0 0 1-3 3 3 3 0 0 1-3-3V2"/><path d="M15 11v11"/><path d="M6 2v20"/><path d="M6 7h4a2 2 0 0 0 2-2V2"/></svg>
+            <span>EXPLORE MENU</span>
+          </a>
+          <a class="hero-btn-sub" href="assets/docs/oasis-catering-menu.pdf" download="Oasis-Catering-Menu.pdf">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            <span>DOWNLOAD MENU (PDF)</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- 4-Pillar Features Bar in Hero -->
+      <div class="hero-pillars">
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
+          </div>
+          <div class="pillar-label">Authentic<br>Pakistani Food</div>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 19h20L12 3z"/><path d="M12 3v16"/><path d="M7 19l5-10 5 10"/></svg>
+          </div>
+          <div class="pillar-label">Grand<br>Marquees</div>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2a4 4 0 0 0-4 4 4 4 0 0 0 8 0 4 4 0 0 0-4-4z"/><path d="M12 14a4 4 0 0 0-4 4 4 4 0 0 0 8 0 4 4 0 0 0-4-4z"/><path d="M2 12a4 4 0 0 0 4-4 4 4 0 0 0 0 8 4 4 0 0 0-4-4z"/><path d="M14 12a4 4 0 0 0 4-4 4 4 0 0 0 0 8 4 4 0 0 0-4-4z"/></svg>
+          </div>
+          <div class="pillar-label">Elegant<br>Decorations</div>
+        </div>
+        <div class="pillar-divider"></div>
+        <div class="pillar-item">
+          <div class="pillar-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="pillar-label">Complete<br>Event Management</div>
+        </div>
+      </div>
+
       <div class="hero-dots" id="heroDots"></div>
     </div>
   </div>
@@ -267,14 +322,23 @@
 
 <!-- ============ ROLLING TICKER ============ -->
 <div class="marquee" aria-hidden="true">
+  <div class="marquee-arrow left">&lsaquo;</div>
   <div class="marquee-track">
-    <span>Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp; Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp;</span>
-    <span>Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp; Fresh <b>•</b> Flavorful <b>•</b> Memorable &nbsp;—&nbsp; Good Food <b>•</b> Good Mood <b>•</b> Great Memories &nbsp;—&nbsp; Your Event, Our Responsibility &nbsp;—&nbsp;</span>
+    <span>GOOD FOOD • GOOD MOOD • GREAT MEMORIES • YOUR EVENT OUR RESPONSIBILITY • AUTHENTIC PAKISTANI FLAVORS • SINCE 1988 • ISLAMABAD & RAWALPINDI •&nbsp;</span>
+    <span>GOOD FOOD • GOOD MOOD • GREAT MEMORIES • YOUR EVENT OUR RESPONSIBILITY • AUTHENTIC PAKISTANI FLAVORS • SINCE 1988 • ISLAMABAD & RAWALPINDI •&nbsp;</span>
   </div>
+  <div class="marquee-arrow right">&rsaquo;</div>
+</div>
+
+<!-- ============ DECORATIVE ARCH TRANSITION ============ -->
+<div class="hero-arch-transition">
+  <a href="#at-a-glance" class="hero-scroll-btn" aria-label="Scroll to details">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+  </a>
 </div>
 
 <!-- ============ AT A GLANCE (3 PILLARS) ============ -->
-<section class="section" style="background:#fff;border-bottom:1px solid var(--line)">
+<section class="section" id="at-a-glance" style="background:#fff;border-bottom:1px solid var(--line)">
   <div class="wrap">
     <div class="three-col">
       <div class="feature-card reveal">
@@ -572,6 +636,6 @@
   <a class="fab wa" href="https://wa.me/923295977659?text=Assalam-o-Alaikum%20Oasis!%20I%20would%20like%20a%20quotation." target="_blank" rel="noopener" aria-label="WhatsApp Oasis"><img src="assets/images/icons/whatsapp-white.svg" alt="WhatsApp"></a>
 </div>
 
-<script src="assets/js/main.js?v=24"></script>
+<script src="assets/js/main.js?v=25"></script>
 </body>
 </html>
