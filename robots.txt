@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oasiscatering.pk/sitemap.xml
+Sitemap: https://oasiscaterer.com/sitemap.xml
