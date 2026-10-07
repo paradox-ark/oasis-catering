@@ -16,7 +16,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://oasiscaterer.com/menu.html</loc>
+    <loc>https://oasiscaterer.com/menu</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -38,7 +38,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://oasiscaterer.com/events.html</loc>
+    <loc>https://oasiscaterer.com/events</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -56,7 +56,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://oasiscaterer.com/gallery.html</loc>
+    <loc>https://oasiscaterer.com/gallery</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -70,7 +70,7 @@
     </image:image>
   </url>
   <url>
-    <loc>https://oasiscaterer.com/contact.html</loc>
+    <loc>https://oasiscaterer.com/contact</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -80,13 +80,13 @@
     </image:image>
   </url>
   <url>
-    <loc>https://oasiscaterer.com/privacy.html</loc>
+    <loc>https://oasiscaterer.com/privacy</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://oasiscaterer.com/terms.html</loc>
+    <loc>https://oasiscaterer.com/terms</loc>
     <lastmod>2026-10-07</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>

@@ -17,10 +17,12 @@
   $$("[data-close-drawer]").forEach(b => b.addEventListener("click", () => drawer && drawer.classList.remove("open")));
 
   /* active navigation */
-  const page = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  const currentPath = location.pathname.toLowerCase().replace(/\/index\.html$/, "/").replace(/\.html$/, "");
+  const normalizedCurrent = currentPath === "" || currentPath === "/" ? "/" : currentPath.replace(/\/$/, "");
   $$(".nav-links a, .drawer-panel a.dlink").forEach(a => {
-    const h = (a.getAttribute("href") || "").toLowerCase().split("#")[0];
-    if (h === page || (page === "" && h === "index.html")) a.classList.add("active");
+    const raw = (a.getAttribute("href") || "").toLowerCase().split("#")[0].split("?")[0];
+    const norm = raw === "" || raw === "/" || raw === "index.html" || raw === "/index.html" ? "/" : ("/" + raw.replace(/^\//, "").replace(/\.html$/, ""));
+    if (norm === normalizedCurrent) a.classList.add("active");
   });
 
   /* ---------- scroll reveal ---------- */
@@ -241,6 +243,15 @@
       g.style.display = show ? "" : "none";
     });
   }));
+
+  try {
+    const urlParams = new URLSearchParams(location.search);
+    const initialFilter = urlParams.get("tab") || urlParams.get("filter");
+    if (initialFilter) {
+      const targetBtn = $(`[data-gfilter="${initialFilter}"]`);
+      if (targetBtn) targetBtn.click();
+    }
+  } catch (_) {}
 
   /* lightbox for photos */
   const lb = $("#lightbox");
